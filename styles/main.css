@@ -1,10 +1,9 @@
 :root {
-    --warn: #FAF3DD;
+    --button: #C8D5B9;
     --success: #4A7C59;
     --error: #8FC0A9;
     --border: #68B0AB;
-    --background: #C8D5B9;
- 
+    --background: #FAF3DD;
   }
 
 * {
@@ -16,15 +15,17 @@
 
 body {
     background: var(--background);
+    min-width: 100vh;
     min-height: 100vh;
     text-align: center;
-    margin: 10px;
+    margin: auto;
     padding: 40px;
     font-family: 'Roboto', sans-serif;
 }
 
 header {
     border: solid 10px var(--border);
+    margin: auto;
 }
 
 .top-container {
@@ -54,6 +55,8 @@ li {
     padding: 20px;
     margin: 5px 20px;
     border: solid 4px var(--border);
+    min-width: 5vh;
+    min-height: 5vh;
 }
 
 main {
@@ -71,13 +74,17 @@ button {
     margin: 20px;
 }
 
+button:hover {background-color: var(--button)}
+
+button:active {
+  background-color: var(--success);
+  box-shadow: 0 5px var(--button);
+  transform: translateY(4px);
+}
+
 #plant {
     width: 200px;
     height: 200px;
-}
-
-section .icon-container {
-    
 }
 
 .icon-images  {
