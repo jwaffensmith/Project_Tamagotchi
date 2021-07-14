@@ -22,7 +22,7 @@ const game = {
 
         const $plantName = prompt("This seed needs some love! Please give it food, water and light so it can grow into the plant it's always wanted to be! First, give your plant a name!", "Type Plant Name Here");
         if ($plantName !== null)   {
-        $("#nametag").text(`Hi, I’m ${$plantName}!`);
+            $("#nametag").text(`Hi, I’m ${$plantName}!`);
         };
 
         game.gameTimer();
@@ -31,10 +31,10 @@ const game = {
   },
     nutrientButton (event) {
         if (game.nutrients > 1 && game.nutrients < 10 ) {
-        game.nutrients++;
-        $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
+            game.nutrients++;
+            $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
         } else if (game.nutrients < 1) {
-        return "Game Over";
+            return "Game Over";
     }
   },
 
@@ -42,7 +42,7 @@ const game = {
     if (game.water > 1 && game.water < 10 ) {
         game.water++;
         $waterLevel.text(`WATER: ${game.water}`);
-        } else if (game.water < 1) {
+    } else if (game.water < 1) {
         return "Game Over";
     }
 },
@@ -58,19 +58,19 @@ const game = {
 gameTimer () {
         game.timer = setInterval(this.gameTimer, 1000); 
         if (game.timer === 10) {
-        game.age++;
-        $plantAge.text(`AGE: ${game.age} Days`);
-        $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'");
+            game.age++;
+            $plantAge.text(`AGE: ${game.age} Days`);
+            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'");
         } else if (game.timer === 20) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0114.gif", "alt='animated flower'");
         } else if (game.timer === 30) {
-        game.age++;
-        $plantAge.text(`AGE: ${game.age} Days`);
-        $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0076.gif", "alt='animated flower'");
+            game.age++;
+            $plantAge.text(`AGE: ${game.age} Days`);
+            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0076.gif", "alt='animated flower'");
         }
-        if (game.timer % 5 === 0) {
+        if (game.timer % 5 === 0 && game.nutrients > 0 && game.water > 0 && game.light > 0) {
             game.nutrients--;
             $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
             game.water--;
