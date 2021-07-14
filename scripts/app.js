@@ -8,13 +8,15 @@ const game = {
     age: 1,
     
     startGame (event) {
-
-        $("#nutrient-level").text(`NUTRIENTS: ${game.nutrients}`);
-        $("#water-level").text(`WATER: ${game.water}`);
-        $("#light-level").text(`LIGHT: ${game.light}`);
-        $("#age").text(`AGE: ${game.age}`);
-
-        //const $growingPlant = $("#plant");
+        
+        const $nutrientLevel = $("#nutrient-level");
+        $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
+        const $waterLevel = $("#water-level");
+        $waterLevel.text(`WATER: ${game.water}`);
+        const $lightLevel = $("#light-level");
+        $lightLevel.text(`LIGHT: ${game.light}`);
+        const $plantAge = $("#age");
+        $plantAge.text(`AGE: ${game.age} Day`);
         const $plantGrowth = $("#plant");
         $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0119.gif", "alt='animated growing plant'");
 
@@ -24,6 +26,7 @@ const game = {
         };
         // TODO change prompt method and link timer to reset on the onclick, image resets to seed 
   },
+
   
 };
 
