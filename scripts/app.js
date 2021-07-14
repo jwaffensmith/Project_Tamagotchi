@@ -69,6 +69,8 @@ gameTimer () {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0076.gif", "alt='animated flower'");
+        } else if (game.timer === 40) { 
+            $("#win").show();
         }
         if (game.timer % 5 === 0 && game.nutrients > 0 && game.water > 0 && game.light > 0) {
             game.nutrients--;
@@ -80,8 +82,11 @@ gameTimer () {
         }
         if (game.nutrients === 0 || game.water === 0 || game.light === 0) {
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0115.gif", "alt='animated flower'");
+            $("#lose").show();
         }
-    },
+       
+},
+
 };
 
 

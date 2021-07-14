@@ -74,10 +74,12 @@ li {
 
 #win {
     display: none;
+    font-size: 50px;
 }
 
 #lose {
     display: none;
+    font-size: 50px;
 }
 
 main {
