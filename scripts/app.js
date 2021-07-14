@@ -44,17 +44,21 @@ const game = {
         return "Game Over";
     }
 },
-
-  //lightButton (event) {
-
-//  },
+    lightButton (event) {
+        if (game.light > 1 && game.light < 10 ) {
+            game.light++;
+            $lightLevel.text(`LIGHT: ${game.light}`);
+            } else if (game.light < 1) {
+            return "Game Over";
+        }
+},
 
 };
 
 $("#start-button").on("click", game.startGame);
 $("#nutrient-button").on("click", game.nutrientButton);
 $("#water-button").on("click", game.waterButton);
-//$("#light-button").on("click", game.lightButton);
+$("#light-button").on("click", game.lightButton);
 
 
 
