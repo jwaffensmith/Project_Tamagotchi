@@ -1,5 +1,11 @@
 console.log("hello!");
 
+const $nutrientLevel = $("#nutrient-level");
+const $waterLevel = $("#water-level");
+const $lightLevel = $("#light-level");
+const $plantAge = $("#age");
+const $plantGrowth = $("#plant");
+
 const game = {
     nutrients: 3,
     water: 3,
@@ -8,29 +14,43 @@ const game = {
     age: 1,
     
     startGame (event) {
-        
-        const $nutrientLevel = $("#nutrient-level");
         $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
-        const $waterLevel = $("#water-level");
         $waterLevel.text(`WATER: ${game.water}`);
-        const $lightLevel = $("#light-level");
         $lightLevel.text(`LIGHT: ${game.light}`);
-        const $plantAge = $("#age");
         $plantAge.text(`AGE: ${game.age} Day`);
-        const $plantGrowth = $("#plant");
         $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0119.gif", "alt='animated growing plant'");
 
         const $plantName = prompt("This seed needs some love! Please give it food, water and light so it can grow into the plant it's always wanted to be! First, give your plant a name!", "Type Plant Name Here");
         if ($plantName !== null)   {
         $("#nametag").text(`Hi, I’m ${$plantName}!`);
         };
+
         // TODO change prompt method and link timer to reset on the onclick, image resets to seed 
   },
+    nutrientButton (event) {
+        if (game.nutrients > 1 && game.nutrients < 10 ) {
+        game.nutrients++;
+        $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
+        } else if (game.nutrients < 1) {
+            return "Game Over";
+    }
+  },
 
-  
+  //waterButton (event) {
+
+  //},
+
+  //lightButton (event) {
+
+//  },
+
 };
 
 $("#start-button").on("click", game.startGame);
+$("#nutrient-button").on("click", game.nutrientButton);
+//$("#water-level").on("click", game.waterButton);
+//$("#light-level").on("click", game.lightButton);
+
 
 
 
