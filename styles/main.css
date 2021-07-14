@@ -24,6 +24,14 @@ body {
     filter: brightness(100%);
 }
 
+#welcome-screen {
+
+}
+
+#main-screen {
+    display: none;
+}
+
 header {
     border: solid 10px var(--border);
     margin: auto;
