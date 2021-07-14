@@ -78,6 +78,9 @@ gameTimer () {
             game.light--;
             $lightLevel.text(`LIGHT: ${game.light}`);
         }
+        if (game.nutrients === 0 || game.water === 0 || game.light === 0) {
+            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0115.gif", "alt='animated flower'");
+        }
     },
 };
 
