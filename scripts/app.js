@@ -57,10 +57,18 @@ const game = {
 
 gameTimer () {
         game.timer = setInterval(this.gameTimer, 1000); 
-        if (game.timer === 30) {
+        if (game.timer === 10) {
         game.age++;
         $plantAge.text(`AGE: ${game.age} Day`);
         $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'");
+        } else if (game.timer === 20) {
+            game.age++;
+            $plantAge.text(`AGE: ${game.age} Day`);
+            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0114.gif", "alt='animated flower'");
+        } else if (game.timer === 30) {
+        game.age++;
+        $plantAge.text(`AGE: ${game.age} Day`);
+        $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0076.gif", "alt='animated flower'");
         }
     },
 };
