@@ -13,9 +13,12 @@ const game = {
     timer: null,
     time: 0,
     age: 1,
+    name: "",
     metrics: null,
     
     startGame (event) {
+        game.name = $("#name").val();
+        $("#nametag").text(`Hi, I'm ${game.name}!`);
         $("#main-screen").show();
         $("#welcome-screen").hide();
         $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
@@ -24,15 +27,7 @@ const game = {
         $plantAge.text(`AGE: ${game.age} Day`);
         $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0119.gif", "alt='animated growing plant'");
 
-        const $plantName = prompt("This seed needs some love! Please give it food, water and light so it can grow into the plant it's always wanted to be! First, give your plant a name!", "Type Plant Name Here");
-        if ($plantName !== null)   {
-            $("#nametag").text(`Hi, I’m ${$plantName}!`);
-        };
-
         game.gameTimer();
-        
-
-        // TODO change prompt method to a hidden element, image resets to seed 
   },
     nutrientButton (event) {
         if (game.nutrients > 0 && game.nutrients < 10 ) {
@@ -55,8 +50,7 @@ const game = {
 },
 
 gameTimer () {
-        game.timer = setInterval(this.gameMetrics, 1000); 
-        console.log(game.time, "I'm the time!");   
+        game.timer = setInterval(this.gameMetrics, 1000);  
 },
 gameMetrics () {
         game.time++;
@@ -96,7 +90,8 @@ gameMetrics () {
 },
 };
 
-$(".start-button").on("click", game.startGame);
+$(".welcome-button").on("click", game.startGame);
 $("#nutrient-button").on("click", game.nutrientButton);
 $("#water-button").on("click", game.waterButton);
 $("#light-button").on("click", game.lightButton);
+// reset button $("#reset-button").on("click", game.startGame);

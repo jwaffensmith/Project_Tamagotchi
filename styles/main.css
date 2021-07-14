@@ -25,7 +25,19 @@ body {
 }
 
 #welcome-screen {
+    text-align: center;
+}
 
+
+#welcome-icon {
+    width: 100vh;
+    max-width: 100px;
+}
+
+#welcome-image {
+    width: 200vh;
+    max-width: 200px;
+    text-align: center;
 }
 
 #main-screen {
@@ -99,9 +111,10 @@ div .plant-image {
     width: 80vh;
     max-width: 900px;
 }
+
 button {
     border: solid 4px var(--border);
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
     cursor: pointer;
 }
