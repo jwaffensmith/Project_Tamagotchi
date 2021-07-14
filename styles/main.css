@@ -114,6 +114,11 @@ button:active {
     height: 200px;
 }
 
+#start {
+    width: 50vh;
+    max-width: 50px;
+}
+
 .icon-images  {
     width: 80vh;
     max-width: 100px;
