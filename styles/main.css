@@ -26,6 +26,9 @@ body {
 header {
     border: solid 10px var(--border);
     margin: auto;
+    max-width: 1000px;
+    max-height: 1000px;
+
 }
 
 .top-container {
@@ -40,7 +43,8 @@ h1 {
 
 #age {
     border: solid 4px var(--border);
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
 }
 
 ul {

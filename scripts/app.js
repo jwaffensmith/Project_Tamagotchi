@@ -1,53 +1,58 @@
 console.log("hello!");
 
 const game = {
-    Nutrients:3,
-    Water: 3,
-    Light: 3,
-    Timer: null,
-    Age: null,
-   // needed? name: “”, 
+    nutrients: 3,
+    water: 3,
+    light: 3,
+    timer: null,
+    age: 1,
+    
+    startGame (event) {
 
+        $("#nutrient-level").text(`NUTRIENTS: ${game.nutrients}`);
+        $("#water-level").text(`WATER: ${game.water}`);
+        $("#light-level").text(`LIGHT: ${game.light}`);
+        $("#age").text(`AGE: ${game.age}`);
+
+        //const $growingPlant = $("#plant");
+        const $plantGrowth = $("#plant");
+        $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0119.gif", "alt='animated growing plant'");
+
+        const $plantName = prompt("This seed needs some love! Please give it food, water and light so it can grow into the plant it's always wanted to be! First, give your plant a name!", "Type Plant Name Here");
+        if ($plantName !== null)   {
+        $("#nametag").text(`Hi, I’m ${$plantName}!`);
+        };
+        // TODO change prompt method and link timer to reset on the onclick, image resets to seed 
+  },
+  
 };
+
+$("#start-button").on("click", game.startGame);
+
 
 
 /*
-Pseudo code/Milestones 
-Basic HTML- see wireframes
-Basic CSS 
-Four event listeners- start/reset button and metrics 
-Progress bar- html tag and .value in jquery 
-Submit form
-Name input and append to h1 tag
-Pop up boxes for winning after 4 days or losing if a value goes to 0
-3 minute game with each day as 45 seconds 
-Plant will morph and age will change up each day, .text to main tag
-Values drop every 5-10 seconds
-When light button is clicked the page gets brighter (css filter) 
-1 click is one point for each button 
-Object based programming with methods
-
-Method for start/reset
-- pops up name input
-- Values default to 3
-- Timer resets after submit form
+Milestones 
 
 Method for timer
 - begins at begin/reset button 
-- points decrease 
+- A day is worth x second/minutes, 4 rounds
+- Values drop by 1 every x seconds
 - Age increase by one (.text)
-- pic changes as days increase by one (img .text? 4 images)
+- Plant will morph and age after each day
 - CSS- image moves around page 
 - When pet dies or pet reaches 4 days, time stops 
 - pop up message for winning after 4 days
 
 Method for metric buttons 
-- increase by one
-- Light will turn page brighter for x seconds
+- increase by one per click 
+- When light button is clicked the page gets brighter for x seconds (css filter) 
+- Pop up boxes/elements for winning after 4 days or losing if a value goes to 0
+- Progress bar- html tag and .value in jquery 
 
 Method end of game 
 - if one value reaches 0 
 - Pop up message game over
 - Dead plant img 
-
+    
 */
