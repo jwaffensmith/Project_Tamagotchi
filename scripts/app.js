@@ -30,47 +30,39 @@ const game = {
         // TODO change prompt method to a hidden element, image resets to seed 
   },
     nutrientButton (event) {
-        if (game.nutrients > 1 && game.nutrients < 10 ) {
+        if (game.nutrients > 0 && game.nutrients < 10 ) {
             game.nutrients++;
             $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
-        } else if (game.nutrients < 1) {
-            return "Game Over";
     }
   },
 
     waterButton (event) {
-    if (game.water > 1 && game.water < 10 ) {
+    if (game.water > 0 && game.water < 10 ) {
         game.water++;
         $waterLevel.text(`WATER: ${game.water}`);
-    } else if (game.water < 1) {
-        return "Game Over";
     }
 },
     lightButton (event) {
-        if (game.light > 1 && game.light < 10 ) {
+        if (game.light > 0 && game.light < 10 ) {
             game.light++;
             $lightLevel.text(`LIGHT: ${game.light}`);
-            } else if (game.light < 1) {
-            return "Game Over";
         }
 },
 
 gameTimer () {
         game.timer = setInterval(this.gameTimer, 1000); 
-        if (game.timer === 10) {
+        if (game.timer === 5) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'");
-        } else if (game.timer === 20) {
+        } else if (game.timer === 10) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0114.gif", "alt='animated flower'");
-        } else if (game.timer === 30) {
+        } else if (game.timer === 15) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0076.gif", "alt='animated flower'");
-        } else if (game.timer === 40) { 
-            $("#win").show();
         }
         if (game.timer % 5 === 0 && game.nutrients > 0 && game.water > 0 && game.light > 0) {
             game.nutrients--;
@@ -79,13 +71,17 @@ gameTimer () {
             $waterLevel.text(`WATER: ${game.water}`);
             game.light--;
             $lightLevel.text(`LIGHT: ${game.light}`);
-        }
-        if (game.nutrients === 0 || game.water === 0 || game.light === 0) {
-            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0115.gif", "alt='animated flower'");
-            $("#lose").show();
+        }  else if (game.timer === 20) {
+            $("#win").show();
+            clearInterval(game.timer);
+        } else if (game.nutrients === 0 || game.water === 0 || game.light === 0) {
+               $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0115.gif", "alt='animated flower'");
+               $("#lose").show();
+               clearInterval(game.timer);
         }
        
 },
+
 
 };
 
