@@ -25,7 +25,9 @@ const game = {
         $("#nametag").text(`Hi, I’m ${$plantName}!`);
         };
 
-        // TODO change prompt method and link timer to reset on the onclick, image resets to seed 
+        game.gameTimer();
+
+        // TODO change prompt method to a hidden element, image resets to seed 
   },
     nutrientButton (event) {
         if (game.nutrients > 1 && game.nutrients < 10 ) {
@@ -53,38 +55,18 @@ const game = {
         }
 },
 
+gameTimer () {
+        game.timer = setInterval(this.gameTimer, 1000); 
+        if (game.timer === 30) {
+        game.age++;
+        $plantAge.text(`AGE: ${game.age} Day`);
+        $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'");
+        }
+    },
 };
+
 
 $("#start-button").on("click", game.startGame);
 $("#nutrient-button").on("click", game.nutrientButton);
 $("#water-button").on("click", game.waterButton);
 $("#light-button").on("click", game.lightButton);
-
-
-
-
-/*
-Milestones 
-
-Method for timer
-- begins at begin/reset button 
-- A day is worth x second/minutes, 4 rounds
-- Values drop by 1 every x seconds
-- Age increase by one (.text)
-- Plant will morph and age after each day
-- CSS- image moves around page 
-- When pet dies or pet reaches 4 days, time stops 
-- pop up message for winning after 4 days
-
-Method for metric buttons 
-- increase by one per click 
-- When light button is clicked the page gets brighter for x seconds (css filter) 
-- Pop up boxes/elements for winning after 4 days or losing if a value goes to 0
-- Progress bar- html tag and .value in jquery 
-
-Method end of game 
-- if one value reaches 0 
-- Pop up message game over
-- Dead plant img 
-    
-*/

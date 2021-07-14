@@ -21,6 +21,7 @@ body {
     margin: auto;
     padding: 40px;
     font-family: 'Roboto', sans-serif;
+    filter: brightness(100%);
 }
 
 header {
@@ -47,6 +48,10 @@ h1 {
     margin: 10px;
 }
 
+#timer {
+    display: none;
+}
+
 ul {
     list-style-type: none;
     margin: 20px;
@@ -63,12 +68,24 @@ li {
     min-height: 5vh;
 }
 
+#welcome {
+    display: none;
+}
+
+#win {
+    display: none;
+}
+
+#lose {
+    display: none;
+}
+
 main {
     padding: 50px;
     margin: 40px 20px;
 }
 
-div .plant-container {
+div .plant-image {
     width: 80vh;
     max-width: 900px;
 }
