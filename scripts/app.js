@@ -32,13 +32,18 @@ const game = {
         game.nutrients++;
         $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
         } else if (game.nutrients < 1) {
-            return "Game Over";
+        return "Game Over";
     }
   },
 
-  //waterButton (event) {
-
-  //},
+    waterButton (event) {
+    if (game.water > 1 && game.water < 10 ) {
+        game.water++;
+        $waterLevel.text(`WATER: ${game.water}`);
+        } else if (game.water < 1) {
+        return "Game Over";
+    }
+},
 
   //lightButton (event) {
 
@@ -48,8 +53,8 @@ const game = {
 
 $("#start-button").on("click", game.startGame);
 $("#nutrient-button").on("click", game.nutrientButton);
-//$("#water-level").on("click", game.waterButton);
-//$("#light-level").on("click", game.lightButton);
+$("#water-button").on("click", game.waterButton);
+//$("#light-button").on("click", game.lightButton);
 
 
 
