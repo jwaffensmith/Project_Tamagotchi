@@ -19,6 +19,8 @@ const game = {
     startGame (event) {
         game.name = $("#name").val();
         $("#nametag").text(`Hi, I'm ${game.name}!`);
+        $("#lose").text(`${game.name} didn't survive. Game Over`);
+        $("#win").text(`${game.name} thriving. You win!`);
         $("#main-screen").show();
         $("#welcome-screen").hide();
         $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
@@ -57,16 +59,15 @@ gameMetrics () {
         if (game.time === 5) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
-            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'");
+            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0112.gif", "alt='animated flower'");
         } else if (game.time === 10) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
-            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0114.gif", "alt='animated flower'");
+            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/352/animated-sunflower-image-0022.gif", "alt='animated flower'");
         } else if (game.time === 15) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
-            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0076.gif", "alt='animated flower'");
-            $plantGrowth.css({'width' : '250px' , 'height' : '250px'});
+            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'");
         } else if (game.time === 20) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
@@ -84,6 +85,7 @@ gameMetrics () {
         }
         if (game.nutrients === 0 || game.water === 0 || game.light === 0) {
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0115.gif", "alt='animated flower'");
+            $plantGrowth.css({'width' : '200px' , 'height' : '200px'});
             $("#lose").show();
             clearInterval(game.timer);
         } 
