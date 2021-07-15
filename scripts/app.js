@@ -26,7 +26,7 @@ const game = {
         $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
         $waterLevel.text(`WATER: ${game.water}`);
         $lightLevel.text(`LIGHT: ${game.light}`);
-        $plantAge.text(`AGE: ${game.age} Day`);
+        $plantAge.text(`AGE: ${game.age}`);
         $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0119.gif", "alt='animated growing plant'");
 
         game.gameTimer();
@@ -58,19 +58,19 @@ gameMetrics () {
         game.time++;
         if (game.time === 5) {
             game.age++;
-            $plantAge.text(`AGE: ${game.age} Days`);
+            $plantAge.text(`AGE: ${game.age}`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0112.gif", "alt='animated flower'");
         } else if (game.time === 10) {
             game.age++;
-            $plantAge.text(`AGE: ${game.age} Days`);
+            $plantAge.text(`AGE: ${game.age}`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/352/animated-sunflower-image-0022.gif", "alt='animated flower'");
         } else if (game.time === 15) {
             game.age++;
-            $plantAge.text(`AGE: ${game.age} Days`);
+            $plantAge.text(`AGE: ${game.age}`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'")
         } else if (game.time === 20) {
             game.age++;
-            $plantAge.text(`AGE: ${game.age} Days`);
+            $plantAge.text(`AGE: ${game.age}`);
         } else if (game.age === 5) {
             $("#win").show();
             clearInterval(game.timer); 

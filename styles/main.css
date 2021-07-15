@@ -12,19 +12,26 @@
     box-sizing: border-box;
   }
 
-
+  
 body {
     width: 100vh;
     height: 100vh;
     text-align: center;
     margin: auto;
     font-family: 'Roboto', sans-serif;
+    font-weight: 400px;
     background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
+
+/*font-family: 'Libre Franklin', sans-serif;*/
 
 
 #welcome-screen {
     margin: 100px 0px;
+    font-family: 'Bitter', serif;
+    font-weight: 500;
 }
 
 input  {
@@ -60,11 +67,18 @@ input:hover {
 
 header {
     border: solid 10px var(--success);
+    border-radius: 5px;
     margin: auto;
     max-width: 1000px;
     max-height: 1000px;
-
 }
+
+#nametag {
+    font-size: 50px;
+    padding: 30px;
+}
+
+
 
 .top-container {
     display: flex;
@@ -77,9 +91,11 @@ h1 {
 }
 
 #age {
-    border: solid 4px var(--border);
+    border: solid 4px var(--success);
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
+    font-size: 40px;
 }
 
 ul {
@@ -94,6 +110,7 @@ li {
     padding: 20px;
     margin: 5px 20px;
     border: solid 4px var(--border);
+    border-radius: 3px;
     min-width: 5vh;
     min-height: 5vh;
 }
@@ -126,6 +143,7 @@ button {
     padding: 10px;
     margin: 20px;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 button:hover {
@@ -134,10 +152,11 @@ button:hover {
 }
 
 button:active {
-  background-color: var(--success);
-  box-shadow: 0 5px var(--button);
+  background-color: var(--button);
+  box-shadow: 0 5px var(--border);
   transform: translateY(4px);
 }
+
 
 #plant {
     width: 200px;
@@ -145,15 +164,11 @@ button:active {
 }
 
 #reset-icon {
-    width: 50vh;
-    max-width: 50px;
+    width: 100vh;
+    max-width: 70px;
 }
 
 .icon-images  {
-    width: 80vh;
+    width: 100vh;
     max-width: 100px;
 }
-
-
-
-
