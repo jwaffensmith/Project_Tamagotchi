@@ -98,8 +98,8 @@ gameMetrics () {
         game.gameTimer();
 },
     
-    resetGame () {
-      game.gameMetrics.reload();
+  resetGame () {
+    location.reload(true)
 },
 
 };
@@ -108,4 +108,5 @@ $(".welcome-button").on("click", game.startGame);
 $("#nutrient-button").on("click", game.nutrientButton);
 $("#water-button").on("click", game.waterButton);
 $("#light-button").on("click", game.lightButton);
-//$("#reset-button").on("click", game.resetGame);
+$("#reset-button").on("click", game.resetGame);
+

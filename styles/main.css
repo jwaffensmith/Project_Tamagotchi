@@ -167,6 +167,9 @@ button:active {
     --animate-duration: 30s;
 }
 
+#reset-button {
+    border: solid 4px #3C6E71;
+}
 #reset-icon {
     width: 100vh;
     max-width: 70px;
