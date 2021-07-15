@@ -4,7 +4,7 @@ const $nutrientLevel = $("#nutrient-level");
 const $waterLevel = $("#water-level");
 const $lightLevel = $("#light-level");
 const $plantAge = $("#age");
-const $plantGrowth = $("#plant");
+const $plantGrowth = $("#plant-one");
 
 const game = {
     nutrients: 3,
@@ -28,7 +28,6 @@ const game = {
         $lightLevel.text(`LIGHT: ${game.light}`);
         $plantAge.text(`AGE: ${game.age}`);
         $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0119.gif", "alt='animated growing plant'");
-
         game.gameTimer();
   },
     nutrientButton (event) {
@@ -59,15 +58,18 @@ gameMetrics () {
         if (game.time === 5) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
-            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0112.gif", "alt='animated flower'");
+            $("#plant-one").hide();
+            $("#plant-two").show();
         } else if (game.time === 10) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
-            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/352/animated-sunflower-image-0022.gif", "alt='animated flower'");
+            $("#plant-two").hide();
+            $("#plant-three").show();
         } else if (game.time === 15) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
-            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'")
+            $("#plant-three").hide();
+            $("#plant-four").show();
         } else if (game.time === 20) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
