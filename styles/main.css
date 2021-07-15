@@ -42,7 +42,7 @@ input:hover {
 }
 
  p {
-    padding: 20px;
+    padding: 10px;
     font-size: 25px;
 }
 
@@ -129,6 +129,7 @@ main {
 div .plant-image {
     width: 80vh;
     max-width: 900px;
+    display: inline-block;
 }
 
 button {
