@@ -65,24 +65,26 @@ gameMetrics () {
             $plantAge.text(`AGE: ${game.age}`);
         } else if (game.age === 5) {
             $("#win").show();
+            $(".icons").attr("disabled", true);
             clearInterval(game.timer); 
         }    
-       if (game.time % 3 === 0 && game.nutrients > 0 && game.water > 0 && game.light > 0) {
-            game.nutrients--;
-            $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
+       if (game.time % 2 === 0 && game.water > 0 && game.light > 0) {
             game.water--;
             $waterLevel.text(`WATER: ${game.water}`);
             game.light--;
             $lightLevel.text(`LIGHT: ${game.light}`);
+        } else if (game.time % 3 === 0 && game.nutrients > 0) {
+            game.nutrients--;
+            $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
         }
         if (game.nutrients === 0 || game.water === 0 || game.light === 0) {
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0115.gif", "alt='animated flower'");
             $("#lose").show();
+            $(".icons").attr("disabled", true);
             clearInterval(game.timer);
         } 
         
 },
-
     gameSetup () {
         game.name = $("#name").val();
         $("#nametag").text(`Hi, I'm ${game.name}!`);
