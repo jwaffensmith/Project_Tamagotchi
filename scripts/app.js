@@ -66,6 +66,7 @@ gameMetrics () {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0076.gif", "alt='animated flower'");
+            $plantGrowth.css({'width' : '250px' , 'height' : '250px'});
         } else if (game.time === 20) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
