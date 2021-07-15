@@ -35,6 +35,7 @@ input  {
     padding: 20px;
     margin: 30px;
     border: solid 4px var(--border);
+    border-radius: 30px;
 }
 
 input:hover {
@@ -70,6 +71,7 @@ header {
     margin: auto;
     max-width: 1000px;
     max-height: 1000px;
+    border-radius: 30px;
 }
 
 #nametag {
@@ -95,6 +97,7 @@ h1 {
     padding: 20px;
     margin: 10px;
     font-size: 40px;
+    border-radius: 30px;
 }
 
 ul {
@@ -109,7 +112,7 @@ li {
     padding: 20px;
     margin: 20px 40px;
     border: solid 5px #3C6E71;
-    border-radius: 3px;
+    border-radius: 30px;
     max-width: 50vw;
     max-height: 50vh;
     font-size: 25px;
@@ -142,7 +145,8 @@ button {
     padding: 10px;
     margin: 20px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 30px;
+    box-shadow: 0 5px var(--border);
 }
 
 button:hover {
@@ -170,9 +174,11 @@ button:active {
 #reset-button {
     border: solid 4px #3C6E71;
 }
+
 #reset-icon {
     width: 100vh;
     max-width: 70px;
+    margin: 5px 0px;
 }
 
 #water-button, #light-button {
