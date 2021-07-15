@@ -45,29 +45,29 @@ gameTimer () {
 },
 gameMetrics () {
         game.time++;
-        if (game.time === 5) {
+        if (game.time === 15) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
             $("#plant-one").hide();
             $("#plant-two").show();
-        } else if (game.time === 10) {
+        } else if (game.time === 30) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
             $("#plant-two").hide();
             $("#plant-three").show();
-        } else if (game.time === 15) {
+        } else if (game.time === 45) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
             $("#plant-three").hide();
             $("#plant-four").show();
-        } else if (game.time === 20) {
+        } else if (game.time === 50) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
         } else if (game.age === 5) {
             $("#win").show();
             clearInterval(game.timer); 
         }    
-       if (game.time % 5 === 0 && game.nutrients > 0 && game.water > 0 && game.light > 0) {
+       if (game.time % 3 === 0 && game.nutrients > 0 && game.water > 0 && game.light > 0) {
             game.nutrients--;
             $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
             game.water--;
