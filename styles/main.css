@@ -14,19 +14,34 @@
 
 
 body {
-    min-width: 100vh;
-    min-height: 100vh;
+    width: 100vh;
+    height: 100vh;
     text-align: center;
     margin: auto;
-    padding: 40px;
     font-family: 'Roboto', sans-serif;
     background-color: var(--background);
 }
 
+
 #welcome-screen {
-    text-align: center;
+    margin: 100px 0px;
 }
 
+input  {
+    padding: 20px;
+    margin: 30px;
+    border: solid 4px var(--border);
+}
+
+input:hover {
+    background-color: rgb(244, 240, 240);
+    cursor: pointer;
+}
+
+ p {
+    padding: 20px;
+    font-size: 25px;
+}
 
 #welcome-icon {
     width: 100vh;
@@ -44,7 +59,7 @@ body {
 }
 
 header {
-    border: solid 10px var(--border);
+    border: solid 10px var(--success);
     margin: auto;
     max-width: 1000px;
     max-height: 1000px;
@@ -87,11 +102,13 @@ li {
 #win {
     display: none;
     font-size: 50px;
+    padding: 20px;
 }
 
 #lose {
     display: none;
     font-size: 50px;
+    padding: 20px;
 }
 
 main {

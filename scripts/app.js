@@ -20,7 +20,7 @@ const game = {
         game.name = $("#name").val();
         $("#nametag").text(`Hi, I'm ${game.name}!`);
         $("#lose").text(`${game.name} didn't survive. Game Over`);
-        $("#win").text(`${game.name} thriving. You win!`);
+        $("#win").text(`${game.name} is thriving. You win!`);
         $("#main-screen").show();
         $("#welcome-screen").hide();
         $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
@@ -67,7 +67,7 @@ gameMetrics () {
         } else if (game.time === 15) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
-            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'");
+            $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0097.gif", "alt='animated flower'")
         } else if (game.time === 20) {
             game.age++;
             $plantAge.text(`AGE: ${game.age} Days`);
@@ -85,7 +85,6 @@ gameMetrics () {
         }
         if (game.nutrients === 0 || game.water === 0 || game.light === 0) {
             $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0115.gif", "alt='animated flower'");
-            $plantGrowth.css({'width' : '200px' , 'height' : '200px'});
             $("#lose").show();
             clearInterval(game.timer);
         } 
