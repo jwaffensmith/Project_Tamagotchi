@@ -17,19 +17,9 @@ const game = {
     metrics: null,
     
     startGame (event) {
-        game.name = $("#name").val();
-        $("#nametag").text(`Hi, I'm ${game.name}!`);
-        $("#lose").text(`${game.name} didn't survive. Game Over.`);
-        $("#win").text(`${game.name} is thriving. You win!`);
-        $("#main-screen").show();
-        $("#welcome-screen").hide();
-        $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
-        $waterLevel.text(`WATER: ${game.water}`);
-        $lightLevel.text(`LIGHT: ${game.light}`);
-        $plantAge.text(`AGE: ${game.age}`);
-        $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0119.gif", "alt='animated growing plant'");
-        game.gameTimer();
+        game.gameSetup ();
   },
+
     nutrientButton (event) {
         if (game.nutrients > 0 && game.nutrients < 10 ) {
             game.nutrients++;
@@ -92,10 +82,30 @@ gameMetrics () {
         } 
         
 },
+
+    gameSetup () {
+        game.name = $("#name").val();
+        $("#nametag").text(`Hi, I'm ${game.name}!`);
+        $("#lose").text(`${game.name} didn't survive. Game Over.`);
+        $("#win").text(`${game.name} is thriving. You win!`);
+        $("#main-screen").show();
+        $("#welcome-screen").hide();
+        $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
+        $waterLevel.text(`WATER: ${game.water}`);
+        $lightLevel.text(`LIGHT: ${game.light}`);
+        $plantAge.text(`AGE: ${game.age}`);
+        $plantGrowth.attr("src", "https://www.animatedimages.org/data/media/595/animated-plant-image-0119.gif", "alt='animated growing plant'");
+        game.gameTimer();
+},
+    
+    resetGame () {
+      game.gameMetrics.reload();
+},
+
 };
 
 $(".welcome-button").on("click", game.startGame);
 $("#nutrient-button").on("click", game.nutrientButton);
 $("#water-button").on("click", game.waterButton);
 $("#light-button").on("click", game.lightButton);
-// reset button $("#reset-button").on("click", game.startGame);
+//$("#reset-button").on("click", game.resetGame);
