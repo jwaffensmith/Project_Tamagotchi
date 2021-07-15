@@ -163,12 +163,17 @@ button:active {
 
 #plant-two, #plant-three, #plant-four {
     display: none;
-    --animate-duration: 5s;
+    --animate-duration: 30s;
 }
 
 #reset-icon {
     width: 100vh;
     max-width: 70px;
+}
+
+#water-button, #light-button {
+    padding: 10px;
+    margin: 20px 40px;
 }
 
 .icon-images  {
