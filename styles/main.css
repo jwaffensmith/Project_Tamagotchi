@@ -53,6 +53,7 @@ input:hover {
 }
 
 #welcome-image {
+    padding: 20px;
     width: 200vh;
     max-width: 200px;
     text-align: center;
@@ -157,8 +158,8 @@ button:active {
 
 
 #plant-one, #plant-two, #plant-three, #plant-four {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
 
 #plant-two, #plant-three, #plant-four {
