@@ -19,7 +19,7 @@ const game = {
     startGame (event) {
         game.name = $("#name").val();
         $("#nametag").text(`Hi, I'm ${game.name}!`);
-        $("#lose").text(`${game.name} didn't survive. Game Over`);
+        $("#lose").text(`${game.name} didn't survive. Game Over.`);
         $("#win").text(`${game.name} is thriving. You win!`);
         $("#main-screen").show();
         $("#welcome-screen").hide();
