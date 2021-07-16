@@ -27,6 +27,9 @@ body {
 #welcome-screen {
     font-family: 'Bitter', serif;
     font-weight: 500;
+    background-color: whitesmoke;
+    padding: 5px;
+    margin: 10px;
 }
 
 input  {
@@ -49,6 +52,7 @@ input:hover {
 #welcome-icon {
     width: 100vh;
     max-width: 100px;
+    margin: 5px;
 }
 
 #welcome-image {
