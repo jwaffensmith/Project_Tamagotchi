@@ -68,12 +68,12 @@ gameMetrics () {
             $(".icons").attr("disabled", true);
             clearInterval(game.timer); 
         }    
-       if (game.time % 2 === 0 && game.water > 0 && game.light > 0) {
+       if (game.time % 3 === 0 && game.water > 0 && game.light > 0) {
             game.water--;
             $waterLevel.text(`WATER: ${game.water}`);
             game.light--;
             $lightLevel.text(`LIGHT: ${game.light}`);
-        } else if (game.time % 3 === 0 && game.nutrients > 0) {
+        } else if (game.time % 4 === 0 && game.nutrients > 0) {
             game.nutrients--;
             $nutrientLevel.text(`NUTRIENTS: ${game.nutrients}`);
         }
