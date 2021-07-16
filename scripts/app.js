@@ -45,22 +45,22 @@ gameTimer () {
 },
 gameMetrics () {
         game.time++;
-        if (game.time === 10) {
+        if (game.time === 15) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
             $("#plant-one").hide();
             $("#plant-two").show();
-        } else if (game.time === 20) {
+        } else if (game.time === 25) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
             $("#plant-two").hide();
             $("#plant-three").show();
-        } else if (game.time === 30) {
+        } else if (game.time === 35) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
             $("#plant-three").hide();
             $("#plant-four").show();
-        } else if (game.time === 40) {
+        } else if (game.time === 45) {
             game.age++;
             $plantAge.text(`AGE: ${game.age}`);
         } else if (game.age === 5) {
