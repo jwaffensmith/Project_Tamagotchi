@@ -33,7 +33,7 @@ input  {
     padding: 20px;
     margin: 30px;
     border: solid 4px var(--border);
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 input:hover {
