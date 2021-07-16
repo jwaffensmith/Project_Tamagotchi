@@ -22,5 +22,4 @@ User Stories:
 
 Credits: 
 
-All button icons are sourced from https://www.flaticon.com
-Plant gifs are sourced from https://www.animatedimages.org
+All button icons were sourced from https://www.flaticon.com and Plant gifs were sourced from https://www.animatedimages.org

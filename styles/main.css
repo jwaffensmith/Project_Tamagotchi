@@ -156,12 +156,12 @@ button:active {
 }
 
 
-#plant-one, #plant-two, #plant-three, #plant-four {
+#plant-one, #plant-two, #plant-three, #plant-four, #dead-plant {
     width: 250px;
     height: 250px;
 }
 
-#plant-two, #plant-three, #plant-four {
+#plant-two, #plant-three, #plant-four, #dead-plant {
     display: none;
     --animate-duration: 30s;
 }
