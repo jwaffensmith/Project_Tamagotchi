@@ -91,7 +91,7 @@ gameMetrics () {
 },
     gameSetup () {
         game.name = $("#name").val();
-        $("#nametag").text(`Hi, I'm ${game.name}!`);
+        $("#nametag").text(`${game.name}'s Health Meter`);
         $("#lose").text(`${game.name} didn't survive. Game Over.`);
         $("#win").text(`${game.name} is thriving. You win!`);
         $("#main-screen").show();
