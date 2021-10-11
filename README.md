@@ -1,5 +1,7 @@
 # Project_Tamagotchi
 
+Live site: https://jwaffensmith.github.io/project_tamagotchi/
+
 Wireframes: https://app.moqups.com/mcvPgjsUfn/view/page/a58601c2c
 
 User Stories:
